@@ -5,7 +5,7 @@ before_install:
 install:
 - wget https://github.com/google/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz
 - tar -xzvf protobuf-all-3.6.1.tar.gz
-- pushd protobuf-all-3.6.1 && ./configure --prefix=/usr && make && sudo make install && popd
+- pushd protobuf-3.6.1 && ./configure --prefix=/usr && make && sudo make install && popd
 script:
 - mvn clean install
 - bash <(curl -s https://codecov.io/bash)

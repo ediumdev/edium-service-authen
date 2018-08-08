@@ -1,1 +1,1 @@
-web: java -cp target/edium-service-authen-1.0-SNAPSHOT.jar com.dolphin.edium.authen.StartRpcServer
+web: java -Dserver.port=8088 -jar target/edium-service-authen-1.0-SNAPSHOT.jar

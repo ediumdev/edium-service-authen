@@ -1,1 +1,1 @@
-web: java -Dserver.port=8088 -jar target/edium-service-authen-1.0-SNAPSHOT.jar
+web: java -jar target/edium-service-authen-1.0-SNAPSHOT.jar --server.port=8088

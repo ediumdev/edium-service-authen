@@ -17,7 +17,7 @@ public class StartRpcServer {
 
     private void start() throws IOException {
         /* The port on which the server should run */
-        int port = 8088;
+        int port = Integer.parseInt(System.getProperty("PORT"));
         server = ServerBuilder.forPort(port)
                 .addService(new GreeterService())
                 .build()

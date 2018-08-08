@@ -27,7 +27,7 @@
                 <transformer />
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>com.dolphin.edium.authen.StartService</Main-Class>
+                    <Main-Class>com.dolphin.edium.authen.StartRpcServer</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>

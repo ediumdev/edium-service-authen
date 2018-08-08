@@ -1,0 +1,1 @@
+web: java -jar cp target/edium-service-authen-1.0-SNAPSHOT.jar com.dolphin.edium.authen.StartRpcServer

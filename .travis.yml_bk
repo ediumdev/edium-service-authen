@@ -1,0 +1,20 @@
+language: java
+jdk: oraclejdk8
+before_install:
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+install: true
+script:
+- mvn clean install
+- bash <(curl -s https://codecov.io/bash)
+cache:
+  directories:
+  - "$HOME/.m2"
+deploy:
+  provider: heroku
+  api_key: "${heroku_api_key}"
+  app:
+    master: edium-service-auth
+    production: my-app-production
+env:
+  global:
+    secure: sT/ZAW+C/4OSGkJtC4yKMWmiZ/o5pVjbHGDBUIdCLkBg8efuWhuakNYg+++y+INB/H4Fee94+uhx72ICGQSG4lKGwsOFBwc9Qw+dRKb4xJDfwvBRQbrpoUmRse7B6gDJWvl+nJi1rwTGnfjY7WvHKUFuRZ065oO6Vj64wlSwPJVnm1E8RS7LYslTENsZBjOgDx/fXrrDVwVyO4QfRbuUk7nriexkUOTnGP3s/zk/bfvCTqed0JMk6aw7EZ1v/hKJTFDYpyYdesWZRpRw9m7s8u/BAFIwj1/eaFiWIgFW7cvrreB9I9y+IQ3uhsDFw3oK1KCZs7AyhJByeNQPucmMO0Tlf/ggTxN/qZaFo1zbNPMTTbVmepv3EI5lttds6NwVDWul6IbJdaLUqczH+q3WNEMnHVop5EgvjDZ3aSGUauZ1CAv/Zha1roBixWFCJAqcd0kcbyDg2XOmYTtIFflJFoQppRDkb1vGFLEDHtv4k/WQ2Sk1OidpvS9EbtnidUG8NU5jbFotLrthp8hbyV1cRANUkAdZPr9x6XZy9Vn0g45qfO5Ec1nc98YGdXdOBKMYtvb/o3FVi0H5XZgmaI3ck+VaczNWhXqrkDz5ENmNCN0ivrsauib6466/HfZqDON4d+Td7gODcP4aa967+zGb/Nzcr73aqcQ94B6evOpj1Ro=

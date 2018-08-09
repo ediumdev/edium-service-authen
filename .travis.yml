@@ -15,8 +15,8 @@ deploy:
   secret_access_key:
     secure: ${secret_access_key}
   region: us-west-2
-  app: Test
-  env: Test-env
+  app: edium-service-authen
+  env: EdiumServiceAuthen-env
   bucket_name: elasticbeanstalk-us-west-2-940338783322
 env:
   global:
